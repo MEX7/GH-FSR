@@ -4,13 +4,13 @@ import os
 app = Flask(__name__)
 
 
-@app.route('/script/oerp/v1/java/reload', methods='POST')
+@app.route('/script/oerp/v1/java/reload', method='POST')
 def oerp_java_reload():
     os.system('bash ./sh/java/oerp_v1_reload.sh')
     return '/script/oerp/v1/java/reload'
 
 
-@app.route('/script/oerp/v1/web/reload', methods='POST')
+@app.route('/script/oerp/v1/web/reload', method='POST')
 def oerp_web_world():
     os.system('bash ./sh/web/oerp_v1_reload.sh')
     return '/script/oerp/v1/web/reload'
