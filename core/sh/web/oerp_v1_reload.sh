@@ -2,9 +2,9 @@
 
 # TODO 以后可以将地址以及要执行的脚本作为地址传入
 # 参数初始化
-project_name="outsourcing-erp-angularjs"
+project="/opt/outsourcing-erp-angularjs"
 folder="/opt/script_log/"
-file=$(date +%Y-%m-%d)" ${project_name}.txt"
+file=$(date +%Y-%m-%d)" ${project}.txt"
 
 # 创建日志文件夹
 if [ ! -d "$folder" ]; then
@@ -18,10 +18,10 @@ if [ ! -f "$file" ]; then
 fi
 
 # 写入启动数据
-echo $(date "+%Y-%m-%d %H:%M:%S")"  $project_name  oerp_v1_reload 脚本执行开始" >> "$file"
+echo $(date "+%Y-%m-%d %H:%M:%S")" $project oerp_v1_reload 脚本执行开始" >> "$file"
 
-cd /opt/${project_name}
+cd ${project}
 git reset --hard && git pull
 
 cd ${folder}
-echo $(date "+%Y-%m-%d %H:%M:%S")"  $project_name oerp_v1_reload 脚本执行成功" >> "$file"
+echo $(date "+%Y-%m-%d %H:%M:%S")" $project oerp_v1_reload 脚本执行成功" >> "$file"
