@@ -4,7 +4,7 @@
 # 参数初始化
 project_name="outsourcing-erp-angularjs"
 folder="/opt/script_log/"
-file=$(date +%Y-%m-%d)" ${project_name}.log"
+file=$(date +%Y-%m-%d)" ${project_name}.txt"
 
 # 创建日志文件夹
 if [ ! -d "$folder" ]; then
@@ -13,8 +13,8 @@ fi
 cd ${folder}
 
 # 创建当前日期的log文件
-if [ ! -f ${file} ]; then
-    touch ${file}
+if [ ! -f "$file" ]; then
+    touch "$file"
 fi
 
 # 写入启动数据
@@ -23,4 +23,5 @@ echo $(date "+%Y-%m-%d %H:%M:%S")"  $project_name  oerp_v1_reload 脚本执行�
 cd /opt/${project_name}
 git reset --hard && git pull
 
+cd ${folder}
 echo $(date "+%Y-%m-%d %H:%M:%S")"  $project_name oerp_v1_reload 脚本执行成功" >> "$file"

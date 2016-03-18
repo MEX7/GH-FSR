@@ -16,5 +16,5 @@ def oerp_web_world():
     return '/script/oerp/v1/web/reload'
 
 if __name__ == '__main__':
-    app.debug = True
-    app.run()
+    # app.debug = True
+    app.run(host='0.0.0.0')
