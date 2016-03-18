@@ -24,4 +24,5 @@ cd /opt/${project}
 /bin/bash project/application/bin/app stop && git reset --hard && git pull
 /bin/bash project/application/bin/app start
 
+cd ${folder}
 echo $(date "+%Y-%m-%d %H:%M:%S")" $project oerp_v1_reload 脚本执行成功" >> "$file"
