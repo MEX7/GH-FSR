@@ -4,6 +4,7 @@
 # 参数初始化
 project="outsourcing-erp-java"
 folder="/opt/script_log/"
+project_url="/opt/""$project"
 file=$(date +%Y-%m-%d)" ${project}.txt"
 
 # 创建日志文件夹
@@ -20,12 +21,11 @@ fi
 # 写入启动数据
 echo $(date "+%Y-%m-%d %H:%M:%S")" $project oerp_v1_reload 脚本执行开始" >> "$file"
 
-project_url="/opt/""$project"
+
 cd ${project_url}
 /bin/bash project/application/bin/app stop
-echo $(git reset --hard) >> "$file"
-git reset --hard
-git pull
+git reset --hard && git pull
+echo "当前节点 "$(git reset --hard) >> "$folder""$file"
 /bin/bash project/application/bin/app start
 
 cd ${folder}

@@ -3,6 +3,7 @@
 # TODO 以后可以将地址以及要执行的脚本作为地址传入
 # 参数初始化
 project="outsourcing-erp-angularjs"
+project_url="/opt/""$project"
 folder="/opt/script_log/"
 file=$(date +%Y-%m-%d)" ${project}.txt"
 
@@ -20,9 +21,10 @@ fi
 # 写入启动数据
 echo $(date "+%Y-%m-%d %H:%M:%S")" $project oerp_v1_reload 脚本执行开始" >> "$file"
 
-project_url="/opt/""$project"
 cd ${project_url}
-git reset --hard && git pull
+git reset --hard
+echo "当前节点 "$(git reset --hard) >> "$folder""$file"
+git pull
 
 cd ${folder}
 echo $(date "+%Y-%m-%d %H:%M:%S")" $project oerp_v1_reload 脚本执行成功" >> "$file"
