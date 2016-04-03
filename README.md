@@ -1,6 +1,6 @@
 # GH-FSR  
-> 利用Git的hooks来完成项目的自动发布的功能，基于Flask框架直接调用linux上的shell脚本（bash） 
-  git hooks flask shell release 简写 GH-FSR  
+> 利用Git的hooks来完成项目的自动发布的功能，基于Flask框架直接调用linux上的shell脚本（bash）   
+> git hooks flask shell release 简写 GH-FSR  
 
 
 ## 功能构想
