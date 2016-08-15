@@ -7,18 +7,20 @@
 > git hooks flask shell release 简写 GH-FSR  
 
 
-## about
-- Automated Deployment 自动部署功能
-- Document Management API文档管理
+## directory
+- automated 
+> 自动部署功能
 
-分别对应文件夹 automated 和 document
+- document 
+> API文档管理
 
-## start mode
-基于**Gunicorn**  
-[参考文档](http://docs.jinkan.org/docs/flask/deploying/wsgi-standalone.html)
+- utils 
+> 工具集
 
-# Tools recommended
+# recommended tools
 
-## Java 
+## Java
+
+### GsonFormat 
 [https://github.com/zzz40500/GsonFormat](https://github.com/zzz40500/GsonFormat)
 > 适用 android studio和 Intellij IDEA 工具
